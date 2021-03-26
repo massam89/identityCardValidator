@@ -1,0 +1,25 @@
+<div class="container">
+  <header>
+    <h1>Simple Todo List</h1>
+  </header>
+  <main>
+    <div class="todo-form">
+      <form method="POST" action="/addTodo">
+        <label for="todoText">Todo Name</label>
+        <input placeholder="--Type you todo--" type="text" name="todoText" id="todoText">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="to-list">
+      <ul>
+        {{#each item}}
+        <li>
+          <h2>{{this.todoText}}</h2>
+          <button class="delete-buttom" id={{this.id}} type="submit">delete</button>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </main>
+</div>
