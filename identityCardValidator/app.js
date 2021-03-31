@@ -10,8 +10,6 @@
 
     if(!checkLength(number)){
       alert('Input must be 10 digits!');
-    } else if (!checkType(number)){
-      alert('All characters must be numbers!')
     }else{
       let sum = 0;
       let x;
@@ -44,8 +42,6 @@
     }
   }
 
-
-
     //Input must be 16 characters
     function checkLength(number) {
       if (number.length !== 10){
@@ -53,14 +49,4 @@
       } else {
         return true;
       }
-    }
-
-    //All characters must be numbers
-    function checkType(number) {
-      for (let i = 0 ; i < number.length ; i++) {
-        if (!number[i].match(/[0-9]/g)) {
-          return false;
-        }
-      }
-      return true;
     }
