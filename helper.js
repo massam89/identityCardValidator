@@ -1,6 +1,5 @@
-//Input must be 16 characters
+//Input must be 10 characters
 export const checkLength = (number) => (number.length !== 10 ? false : true);
-
 export const checkCardValidator = (number) => {
   let sum = 0;
   let x;
@@ -20,7 +19,6 @@ export const checkCardValidator = (number) => {
     return false;
   }
 };
-
 export const showValidation = (status, element) => {
     element.style.visibility = 'visible';
     if(status === 'valid'){
